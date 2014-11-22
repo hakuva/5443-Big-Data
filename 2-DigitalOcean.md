@@ -100,11 +100,77 @@ $ sudo apt-get install git
 
 - Go to http://your.ip.address/ and see if the apache default page shows up.
 
-#### 7. Email me your Ip address
 
-- In an email with the subject: "5443 IP Info"
+#### 7. Github
 
->- Your Name
-- Your github username
-- The ip address of your new server
-- My password (which is dictated to you above)
+- Create a folder called `BigData` in your `/var/www/html` directory.
+- Change into that folder: `cd BigData`
+- Run the following: `git init`.
+- If you get an error from the previous command, most likely `git` is not installed, so run:
+
+```
+sudo apt-get install git
+```
+- Then try `git init` again.
+
+- If you succesfully ran the previous command, then great! You should see a folder: `.git` in your `BigData` folder now.
+- Go [HERE](https://help.github.com/articles/generating-ssh-keys/) and follow this Github tutorial to generate ssh keys to allow you to "push" files from your server to Github.
+- Now go [HERE](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) to add this `.git` repo to the one you created in your first assignment.
+
+#### 8. Commit Your First File to Github
+
+- Create a folder called `BigData` in `/var/www/html/`
+- Create a file called `README.md` in `/var/www/html/BigData`
+- The `README.md` file shows up when someone browses to your repository!
+
+- In your `README.md` file, place the following info (using nice markdown):
+
+-----
+
+### Name
+
+Your name
+
+### Github Username
+
+Your github username
+
+### Server IP
+
+http://111.222.333.444
+
+-----
+
+When your all done, you should have a directory structure like:
+
+-----
+- ![1] /var/www/html
+    - ![1] BigData
+         - ![9] README.md 
+
+-----
+
+___Now commit your new "repo" to Github!___
+
+```
+git add .
+git commit -m "My first commit"
+git push origin master
+```
+
+If it doesn't work, then your ssh keys, or your upstream remote wasn't set correctly. 
+Come get help from me, because from here on out, everything gets pushed to Github.
+
+
+[1]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/folder2.png
+[2]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/php.png
+[3]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/html.png
+[4]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/css.png
+[5]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/js.png
+[6]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/json.png
+[7]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/xml.png
+[8]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/csv.png
+[9]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/md2.png
+[10]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/sql.png
+[11]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/yml.png
+[12]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/json.png

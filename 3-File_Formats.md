@@ -1,4 +1,4 @@
-## Program 1 - Getting Our Feet Wet
+## Assignment 3 - Data Formats
 #### Due: Thursday Sep 11th by classtime.
 
 ### Basic Idea
@@ -42,8 +42,8 @@ http://cs.mwsu.edu/~griffin/5443-BigData
 
 ## Part One
 
-- Create a fodler in your `/var/www/html` directory called `BigData`
-- Create a folder in your `/var/www/html/BigData` directory called `GpsData`
+- You should already have `/var/www/html/BigData` created.
+- Create a folder in your `/var/www/html/BigData` directory called `FileFormats`
 - Copy the files from http://cs.mwsu.edu/~griffin/5443-BigData to your folder.
 
 How can this be done? Here's two ways (run them from the command line inside your folder):
@@ -53,7 +53,7 @@ How can this be done? Here's two ways (run them from the command line inside you
 
 - Repeat for each file. I'll show you how to write a script in class to automate it for all files.
 - We will also discuss ways to speed this whole process up.
-- When finished you should have a directory listing in `/var/www/html/BigData/GpsData`  similar to the one above.
+- When finished you should have a directory listing in `/var/www/html/BigData/FileFormats`  similar to the one above.
 
 ## Part Two
 
@@ -127,29 +127,63 @@ What if you weren't sure if your json is valid?
 
 - You can go here: http://jsonlint.com/ and it will validate json for you.
 
-### ~~The conversion~~
+### The conversion
 
-- Create a folder in your `/var/www/html/BigData` folder called `Program1`
-- Place all of your scripting in here to complete the conversion.
-- I don't care how you get it done. First, I started giving an example to help with the solution, but now I'm more interested in your process than the solution. So ... no help.
+- You should have `/var/www/html/BigData/FileFormats` created with your gps files in it.
+- Place all of your scripting in here to complete the conversion from one of the files to Json. 
+- Use any language you see fit, but since I'm post editing this document, python would be my choice :) Make sure you call it `conversion.??` and replace the `??` with your languages extension.
+- I don't care how you get it done. You've seen plenty of examples in class by now.
 
 ### The write up
 
-- Explain how you would convert one of the given file formats into a json representation.
-- Assume that you would be writing the code from scratch, and not using a library. This should effect your decision!
+- Explain what language you used, and why, to convert one file to json. Did the language you chose effect which file you converted from?
+- Now assume that you would be writing the code from scratch, in a language of your choice (without a library). This should effect your decision! So explain what language you would use, and which format you would choose to convert to json.
+- When you do convert one of the files to json, what is the final file size?
 
-I want to know:
-- What programming language you chose, to do your conversion and why.
-- What file you choose to convert from, and why.
-- ~~I want to know the size of the completed json.~~
+### In Addition
 
-I'm also curious about how well each file compresses, so in your writeup, include which of the files compresses the best using zip and gzip. Include the original size and the compressed size and the percent compressed.
+- I'm also curious about how well each file compresses, so in your writeup, include which of the files compresses the best using zip and gzip. Include the original size and the compressed size and the percent compressed. 
+- Which files had a better compression ratio?
+- Can you speculate as to why?
 
-I want you to write up your findings for this entire project using `Markdown` and place them in a file called `Program1-Writeup.md`
+- I want you to write up your findings for this entire project using `Markdown` and place them in a file called `writeup.md` here `/var/www/html/BigData/FileFormats/writeup.md`
+
+___Minimum of 1.5 pages or close to 1000 words.___
 
 
+### When your done
 
+You should have a directory structure that looks like:
 
- 
+-----
+- ![1] /var/www/html
+	- ![1] BigData
+	  - ![1] FileFormats
+	    - ![13] conversion.py
+	    - ![8] GpsFilePoints.csv
+	    - ![10] GpsFilePoints.sql
+	    - ![7]  GpsFilePoints.xml
+	    - ![11] GpsFilePoints.yml
+	    - ![12] GpsFilePoints.json
+	    - ![9] writeup.md
+	- ![9] README.md
 
- 
+In addition, you should have `conversion.??` in this folder (I put a conversion.py as an example).
+
+-----
+
+___Now push your changes to Github!___
+
+[1]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/folder2.png
+[2]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/php.png
+[3]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/html.png
+[4]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/css.png
+[5]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/js.png
+[6]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/json.png
+[7]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/xml.png
+[8]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/csv.png
+[9]:  http://cs.mwsu.edu/~griffin/Free-file-icons/24px/md2.png
+[10]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/sql.png
+[11]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/yml.png
+[12]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/json.png
+[13]: http://cs.mwsu.edu/~griffin/Free-file-icons/24px/py.png
